@@ -20,7 +20,7 @@ public class SparkSubmitShell {
         PropertyConfigurator.configure(log4jPropertiestIs);
 
         if (args.length != 2) {
-            System.out.println("usage: java -jar spark-submit-shell.jar <sh> <args>");
+            System.out.println("usage: spark-submit --master [yarn|local] [options] --class org.bgi.flexlab.SparkSubmitShell spark-submit-shell.jar <sh> <args>");
             System.exit(1);
         }
 
