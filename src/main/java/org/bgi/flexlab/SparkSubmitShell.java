@@ -26,7 +26,7 @@ public class SparkSubmitShell {
 
         SparkConf conf = new SparkConf().setAppName("VarSimSpark");
         JavaSparkContext sc = new JavaSparkContext(conf);
-        JavaRDD<Integer> jobsRDD = sc.parallelize(Arrays.asList(new Integer[]{0}));
+        JavaRDD<Integer> jobsRDD = sc.parallelize(Arrays.asList(new Integer[]{0}), 1);
         final String shell = args[0];
         final String shell_args = String.join(" ", Arrays.copyOfRange(args, 1, args.length));
         List<Integer> returnCodes = jobsRDD.mapPartitionsWithIndex(new SparkJob(shell, shell_args), false).collect();

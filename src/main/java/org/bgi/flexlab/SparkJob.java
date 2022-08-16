@@ -27,7 +27,6 @@ public class SparkJob implements Function2<Integer, Iterator<Integer>, Iterator<
     public Iterator<Integer> call(Integer idx, Iterator<Integer> jobIdIter) {
         ArrayList<Integer> result = new ArrayList<>();
         if (jobIdIter.hasNext()) {
-            final int workIdx = jobIdIter.next();
             String cmd = String.format("sh %s %s", shell, shell_args);
             logger.info("cmd: {} {}", shell, shell_args);
             try {
@@ -37,11 +36,11 @@ public class SparkJob implements Function2<Integer, Iterator<Integer>, Iterator<
                 BufferedReader procStdErr = new BufferedReader(new InputStreamReader(proc.getErrorStream()));
                 String line = null;
                 while ((line = procStdOut.readLine()) != null) {
-                    logger.info("cmd stdout: {}", workIdx, line);
+                    logger.info("cmd stdout: {}", line);
                 }
 
                 while ((line = procStdErr.readLine()) != null) {
-                    logger.info("cmd stderr: {}", workIdx, line);
+                    logger.info("cmd stderr: {}", line);
                 }
 
                 procStdOut.close();
