@@ -1,7 +1,7 @@
 SparkSubmitShell
 ----------------
 
-spark-submit-shell is a tool for submit shell job to yarn/standalone cluster or local computer.
+spark-submit-shell is a tool for submit shell job to yarn/standalone cluster or local computer using spark.
 
 
 ## Install
