@@ -29,4 +29,4 @@ spark-submit --master yarn \
 
 ## License
 
-Licensed under the MIT License. See the [LICENSE](https://github.com/Archieyoung/SparkSubmitShell/blob/master/LICENSE)
+Licensed under the MIT License. See the [LICENSE](https://github.com/Archieyoung/SparkSubmitShell/blob/master/LICENSE) file.
