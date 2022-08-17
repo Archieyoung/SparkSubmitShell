@@ -70,15 +70,15 @@ public class SparkJob implements Function2<Integer, Iterator<Integer>, Iterator<
                     }
                 }
 
-                jobStdErrWriter.close();
-                jobStdOutWriter.close();
+                if (jobStdErrWriter != null) jobStdErrWriter.close();
+                if (jobStdOutWriter != null) jobStdOutWriter.close();
                 procStdOut.close();
                 procStdErr.close();
 
                 result.add(proc.waitFor());
                 proc.destroy();
             } catch (Exception e) {
-                logger.error("Failed to execute {}, error message: ", cmd, e.getMessage());
+                logger.error("Failed to execute {}, error message: {}", cmd, e.getMessage());
                 System.exit(1);
             }
         } else {
