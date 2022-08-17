@@ -4,7 +4,7 @@ SparkSubmitShell
 spark-submit-shell is a tool for submit shell job to yarn/standalone cluster or local computer using spark.
 
 
-## Install
+## Build
 
 ```sh
 git clone git@github.com:Archieyoung/SparkSubmitShell.git
@@ -27,3 +27,6 @@ spark-submit --master yarn \
     -o job.o.log -e job.e.log
 ```
 
+## License
+
+Licensed under the MIT License. See the [LICENSE](https://github.com/Archieyoung/SparkSubmitShell/master/LICENSE)
