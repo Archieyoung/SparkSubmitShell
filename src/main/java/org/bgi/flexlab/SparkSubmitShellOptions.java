@@ -97,25 +97,25 @@ public class SparkSubmitShellOptions {
     }
 
     protected String getOptionValue(String opt, String defaultValue) {
-		if (cmdLine.hasOption(opt))
-			return cmdLine.getOptionValue(opt);
-		return defaultValue;
-	}
+        if (cmdLine.hasOption(opt))
+            return cmdLine.getOptionValue(opt);
+        return defaultValue;
+    }
 
-	protected int getOptionIntValue(String opt, int defaultValue) {
-		if (cmdLine.hasOption(opt))
-			return Integer.parseInt(cmdLine.getOptionValue(opt));
-		return defaultValue;
-	}
+    protected int getOptionIntValue(String opt, int defaultValue) {
+        if (cmdLine.hasOption(opt))
+            return Integer.parseInt(cmdLine.getOptionValue(opt));
+        return defaultValue;
+    }
 
     protected boolean getOptionFlagValue(String opt) {
         if (cmdLine.hasOption(opt))
-			return true;
-		return false;
+            return true;
+        return false;
     }
 
-	protected boolean getOptionBooleanValue(String opt, boolean defaultValue) {
-		if (cmdLine.hasOption(opt)) {
+    protected boolean getOptionBooleanValue(String opt, boolean defaultValue) {
+        if (cmdLine.hasOption(opt)) {
             if (cmdLine.getOptionValue(opt).equals("true")) {
                 return true;
             } else if (cmdLine.getOptionValue(opt).equals("false")) {
@@ -123,31 +123,31 @@ public class SparkSubmitShellOptions {
             }
         }
         return defaultValue;
-	}
+    }
 
-	protected double getOptionDoubleValue(String opt, double defaultValue) {
-		if (cmdLine.hasOption(opt))
-			return Double.parseDouble(cmdLine.getOptionValue(opt));
-		return defaultValue;
-	}
+    protected double getOptionDoubleValue(String opt, double defaultValue) {
+        if (cmdLine.hasOption(opt))
+            return Double.parseDouble(cmdLine.getOptionValue(opt));
+        return defaultValue;
+    }
 
-	protected long getOptionLongValue(String opt, long defaultValue) {
-		if (cmdLine.hasOption(opt))
-			return Long.parseLong(cmdLine.getOptionValue(opt));
-		return defaultValue;
-	}
+    protected long getOptionLongValue(String opt, long defaultValue) {
+        if (cmdLine.hasOption(opt))
+            return Long.parseLong(cmdLine.getOptionValue(opt));
+        return defaultValue;
+    }
 
-	protected byte getOptionByteValue(String opt, byte defaultValue) {
-		if (cmdLine.hasOption(opt))
-			return Byte.parseByte(cmdLine.getOptionValue(opt));
-		return defaultValue;
-	}
+    protected byte getOptionByteValue(String opt, byte defaultValue) {
+        if (cmdLine.hasOption(opt))
+            return Byte.parseByte(cmdLine.getOptionValue(opt));
+        return defaultValue;
+    }
 
-	protected short getOptionShortValue(String opt, short defaultValue) {
-		if (cmdLine.hasOption(opt))
-			return Short.parseShort(cmdLine.getOptionValue(opt));
-		return defaultValue;
-	}
+    protected short getOptionShortValue(String opt, short defaultValue) {
+        if (cmdLine.hasOption(opt))
+            return Short.parseShort(cmdLine.getOptionValue(opt));
+        return defaultValue;
+    }
 
     protected String[] getPositionalArgs() {
         return cmdLine.getArgs();
